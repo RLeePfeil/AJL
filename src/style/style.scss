@@ -150,7 +150,7 @@ hr {
 }
 
 .action-bar {
-	line-height: 3.3rem;
+	line-height: 3.2rem;
 	background-color: $red;
 	background-image: $lightstripes;
 	background-repeat: repeat;
@@ -258,6 +258,7 @@ section .dark-bg, .dark-bg {
 	border: 1rem solid rgba(255, 255, 255, .85);
 	padding: 1.5rem 2rem 4rem;
 	background-clip: padding-box;
+	z-index: 5;
 	
 	span.author, span.date {
 		font-size: .85rem;
@@ -275,8 +276,19 @@ section .dark-bg, .dark-bg {
 	h3 {
 		line-height: 1.1;
 		margin-top: .5rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.5rem;
 		color: $blue !important;
+		position: relative;
+		
+		&:after {
+			background-color: $red;
+			bottom: -1rem;
+			content: "";
+			height: 1px;
+			left: 0;
+			position: absolute;
+			width: 3.5rem;
+		}
 	}
 	
 	p.body {
@@ -307,6 +319,16 @@ section .dark-bg, .dark-bg {
 	
 	h3 {
 		color: #FFF !important;
+		margin-bottom: 1.5rem;
+		
+		&:after {
+			display: none;
+		}
+	}
+	
+	h3 {
+		line-height: 1.1;
+		margin-top: .5rem;
 	}
 	
 	p.body {
