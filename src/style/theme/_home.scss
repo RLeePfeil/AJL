@@ -1,0 +1,78 @@
+body#home {
+	background-image: url(../images/bg-main.jpg);
+	background-size: cover;
+	background-position: center top;
+	
+	#landing-hero {
+		position: relative;
+		//height: 80%;
+		padding-top: 10%;
+		padding-bottom: 10%;
+		
+		.row {
+			background-color: transparent;
+		}
+	}
+}
+
+.blue-top-bar, section .blue-top-bar {
+	background-color: $midblue;
+	background-image: $lightstripes;
+	background-position: center top;
+	position: relative;
+	color: #FFF;
+	margin-top: 3rem; // Same as the height of the arrow
+	padding: 4rem 0 3rem;
+	
+	a.blue-top-bar-arrow {
+		background-color: $midblue;
+		background-image: $lightstripes;
+		background-position: center bottom;
+		position: absolute;
+		width: 10rem;
+		margin-left: -5rem;
+		height: 3rem;
+		line-height: 3rem;
+		left: 50%;
+		top: -3rem;
+		text-indent: -9999em;
+	}
+}
+
+.services-bar {
+	padding: 1rem;
+	
+	.table {
+		width: 100%;
+	}
+	
+	li {
+		list-style: none;
+		width: 20%;
+		
+		a {
+			display: block;
+			background-color: $blue;
+			color: #FFF;
+			text-align: center;
+			vertical-align: middle;
+			padding: 15%;
+			height: 10em;
+		}
+	}
+}
+
+.global-reach {
+	background-image: url(../images/index/bg-global-reach.jpg);
+	background-size: cover;
+	padding-bottom: 18%;
+	
+	p {
+		margin: 2em 0 4em;
+		font-weight: 300;
+	}
+}
+
+.experience {
+	
+}

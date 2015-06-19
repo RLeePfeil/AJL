@@ -1,0 +1,6 @@
+assets/
+build/
+src/node_modules
+**/.sass-cache
+**/.sass-cache/*
+**/.DS_STORE

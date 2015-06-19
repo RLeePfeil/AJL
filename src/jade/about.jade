@@ -1,0 +1,23 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title AJL Manufacturing Inc.
+    meta(name="description", content="About | AJL Manufacturing Inc.")
+    include _head.jade
+  
+  body#about
+    a(href="#main").visuallyhidden Skip to main content
+    
+    include _header
+
+    section#main
+      .row
+        .columns.small-12
+          h2.text-center Main
+
+    include _project_callout
+      
+    include _footer
+    include _scripts.jade

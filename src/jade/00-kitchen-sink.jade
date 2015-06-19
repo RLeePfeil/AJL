@@ -1,0 +1,135 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Kitchen Sink | Ted Hosmer Enterprises
+    meta(name="description", content="Kitchen Sink | Ted Hosmer Enterprises")
+    include _head.jade
+
+  body#index
+    
+    include _header.jade
+    
+    section
+      .row
+        .columns.small-12
+          h2 Colors
+          ul.block-grid-medium-3.block-grid-large-6
+            li
+              .swatch.blue-bg
+              p #4e5159
+            li
+              .swatch.lightblue-bg
+              p #e2e7ed;
+            li
+              .swatch.midblue-bg
+              p #7b7f8a;
+            li
+              .swatch.darkblue-bg
+              p #313539;
+            li
+              .swatch.white-bg
+              p #fff
+            li
+              .swatch.grey-bg
+              p #999da7
+            li
+              .swatch.lightgrey-bg
+              p #adb2b8
+            li
+              .swatch.red-bg
+              p #de4645
+            li
+              .swatch.darkred-bg
+              p #d03e3e
+            li
+              .swatch.lightred-bg
+              p #e04c4c
+            li
+              .swatch.stripes-bg
+              p url(../images/stripes.png)
+            li
+              .swatch.darkstripes-bg
+              p url(../images/stripes-dark.png)
+      
+      
+    section
+      .row
+        .columns.small-12
+          h2 Typography (this is an h2 tag)
+          p When creating content for the site <strong>never use the &lt;h1&gt; tag</strong>. Anything from &lt;h2&gt; - &lt;h6&gt; is valid. The &lt;p&gt; can be used as well.
+          hr
+          h3 Titles (this is an h3 tag)
+          h4 This is an h4 tag
+          h5 This is an h5 tag
+          h6 This is an h6 tag
+          hr
+          
+          h2 Special classes
+          h3.red-top-stripes .red-top-stripes
+          h3.red-top-stripes.text-center .red-top-stripes.text-center
+          
+          .dark-bg
+            h2 Dark background (.dark-bg)
+            h3.white-top-stripes .white-top-stripes
+            h3.white-top-stripes.text-center .white-top-stripes.text-center
+          
+          h3 Body
+          p This is a paragraph. Lorem ipsum doler sit amat.
+          ul
+            li This is an unordered list
+            li This is an unordered list
+            li This is an unordered list
+          dl
+            dt This is a definition list title
+            dd This is a definition list description
+            dt This is a definition list title
+            dd This is a definition list description
+            dt This is a definition list title
+            dd This is a definition list description
+    
+    section
+      .row
+        .columns.small-12
+          h2 Layout / padding
+          
+      .row.no-padding.table
+        .table-row
+          .half-width.pad-left.pad-right.padded
+            h3 .half-width.pad-left.pad-right.padded
+            p
+              pre div.row.no-padding.table
+                |  div.table-row
+                |    div.half-width.pad-left.pad-right.padded
+                |      // html
+                |    div.half-width
+                |      img.photo
+            p .half-width splits the container evently with another
+            p .pad-left and .pad-right add the proper padding consistent with the rest of the elements in the page
+
+            .action-bar(style="left: 1em;") .action-bar
+              button.right-carat button.right-carat
+          .half-width
+            img(src="images/photos/office-discussion.jpg", alt="").photo
+            p(style="position:absolute; top: 40%; text-align: center; width: 100%; color:#FFF; text-shadow: 0 0 3px #000;") img with class .photo
+          
+    
+    section
+      .row
+        .columns.small-12
+          h2 Buttons
+          button button
+          button.right-carat button.right-carat
+    
+    section
+      .row
+        .columns.small-12
+          h2 Form Elements
+          input(type="text", placeholder="Your name (input)")
+          textarea(placeholder="Comments (textarea)")
+          button(type="submit") Button
+    
+    include _footer.jade
+
+    include _scripts.jade

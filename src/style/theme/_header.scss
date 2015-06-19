@@ -1,0 +1,155 @@
+
+header {
+	/*
+	background-image: $redstripes;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	*/
+	
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	
+	&:before {
+		z-index: 5;
+		background-image: $redstripes;
+		background-position: 0 0;
+		background-repeat: repeat-x;
+		background-attachment: fixed;
+		height: 8px;
+	}
+	
+	&:after {
+		z-index: 0;
+		background-color: #dde6f5;
+		height: 4px;
+	}
+	
+	.toggle-topbar {
+		display: block;
+		height: 1.5em;
+		width: 2em;
+		position: relative;
+		margin: 2rem 1.5rem 0 0;
+		font-size: 1rem;
+		float: right;
+		
+		a {
+			text-indent: -9999em;
+			display: block;
+			height: 1.5em;
+			width: 2em;
+			position: relative;
+			
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				height: .3em;
+				width: 2em;
+			}
+			
+			&:before {
+				top: 0;
+			}
+			
+			&:after {
+				bottom: 0;
+			}
+		}
+		
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			height: .3em;
+			width: 2em;
+			top: .75em;
+			margin-top: -.15em;
+		}
+		
+		@include mq(netbook) {
+			display: none;
+		}
+	}
+	
+	.logo {
+		margin-top: 2rem;
+	}
+	
+	.main-nav {
+		float: right;
+		
+		li {
+			float: left;
+			list-style: none;
+		}
+		
+		a {
+			text-transform: uppercase;
+			color: $blue;
+			position: relative;
+			font-size: .9rem;
+			font-weight: 700;
+			padding: 3rem .75rem 2.25rem;
+			display: block;
+			z-index: 1;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				background-image: $stripes;
+				background-position: center top;
+				background-attachment: fixed;
+				top: 0;
+				left: 0;
+				height: 0;
+				width: 100%;
+				transition: all 0.15s ease-out 0s;
+				z-index: -1;
+			}
+			
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				background-color: $red;
+				height: 2px;
+				width: 100%;
+				bottom: 0;
+				left: 0;
+				opacity: 0;
+				//transition: all 0.15s ease-out 0s;
+			}
+			
+			&:hover, &:focus, &.active {
+				&:before {
+					height: 100%;
+					transition: all 0.3s ease-out 0s;
+				}
+				
+				&:after {
+					opacity: 1;
+					//transition: all 0.3s ease-out 0s;
+				}
+			}
+		}
+	}
+}
+
+body#about-us a.nav-about-us, body#our-approach a.nav-our-approach, body#global-reach a.nav-global-reach, body#resources a.nav-resources, body#contact-us a.nav-contact-us {
+	&:before {
+		height: 100%;
+		transition: all 0.3s ease-out 0s;
+	}
+	
+	&:after {
+		opacity: 1;
+	}
+}

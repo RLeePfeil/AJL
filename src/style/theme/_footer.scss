@@ -1,0 +1,55 @@
+footer .footer {
+	color: $grey;
+	padding-top: 5rem;
+	padding-bottom: 2.5rem;
+	
+	.footer-logo {
+		max-width: 286px;
+	}
+	
+	.footer-links {
+		list-style: none;
+		font-size: 1.15rem;
+		font-weight: 700;
+		
+		li {
+			margin-bottom: 1rem;
+			
+			@include mq(desktop) {
+				display: inline-block;
+				margin-right: 2rem;
+			}
+		}
+	}
+	
+	.contact-info {
+		margin-left: 4.1rem;
+		margin-top: 1rem;
+		
+		a {
+			color: $grey;
+		}
+		
+		button {
+			margin-top: 1.25rem;
+			margin-bottom: 0;
+		}
+	}
+	
+	a {
+		color: $blue;
+		text-transform: uppercase;
+	}
+	
+	small {
+		font-size: .85rem;
+		margin: -1em 0 2em;
+		font-weight: 700;
+		color: $grey;
+		
+		a {
+			font-weight: 700;
+			color: $grey;
+		}
+	}
+}

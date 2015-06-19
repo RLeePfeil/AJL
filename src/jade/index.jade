@@ -1,0 +1,145 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title AJL Manufacturing Inc.
+    meta(name="description", content="AJL Manufacturing Inc.")
+    include _head.jade
+
+  body#home
+    a(href="#main").visuallyhidden Skip to main content
+    
+    include _header
+    
+    section#landing-hero
+      .row
+        .columns.small-12.pad-left
+          h1.red-top-stripes Innovative solutions <span>to manufacturing challenges</span>
+    
+    section#main
+      .row.blue-top-bar
+        a.blue-top-bar-arrow(href="#main").down-carat Skip to main content
+        .columns.small-12.large-6.pad-left
+          i.icon.icon-layers.left
+          p.left With an extensive history in sheet metal fabrication, AJL not only offers industry-leading manufacturing capability, it also provides a range of complementary services including design, prototyping, welding, assembly, shipping, and logistics.
+        .columns.small-12.large-6.pad-right
+          p
+           strong Our capabilities and value-added services have made us an invaluable partner to so many customers across a range of industries around the <a class="right-carat">globe</a>
+      
+      .row.no-padding.table
+        .table-row
+          .half-width.pad-left.pad-right.padded
+            h2.red-top-stripes.no-margin Project management
+            ul.icon-list
+              li
+                i.icon.icon-person
+                p Lorem ipsum doler sit amat sit doler. Ipsum, lorem sit doler amat. Sit amat sit doler. Ipsum, lorem sit doler amat.
+              li
+                i.icon.icon-person
+                p Lorem ipsum doler sit amat sit doler. Ipsum, lorem sit doler amat. Ipsum doler sit amat sit doler. Ipsum, lorem.
+              li
+                i.icon.icon-person
+                p Lorem ipsum doler sit amat sit doler. Ipsum, lorem sit doler amat. Doler ipsum, lorem sit doler
+            .action-bar(style="left: 1em;") Our approach to your project
+              button.right-carat Learn more
+          .half-width
+            img(src="images/photos/office-discussion.jpg", alt="").photo
+      
+      .row.services-bar.no-padding
+        .table
+          ul.table-row
+            li.table-cell
+              a(href="engineering.html")
+                i.icon.icon-gear
+                strong Engineering
+            li.table-cell
+              a(href="prototyping.html")
+                i.icon.icon-box
+                strong Prototyping
+            li.table-cell
+              a(href="manufacturing.html")
+                i.icon.icon-claw
+                strong Manufacturing
+            li.table-cell
+              a(href="assembly.html")
+                i.icon.icon-interlock
+                strong Assembly
+            li.table-cell
+              a(href="supply-chain-management.html")
+                i.icon.icon-cycle
+                strong Supply Chain Management
+      
+      .row.padded.dark-bg.global-reach
+        .columns.small-12
+          h2.white-top-stripes.text-center Global reach
+        .columns.small-12.medium-5.large-4.left.pad-left
+          p Our capabilities and value-added services have made us an invaluable partner to so many customers across a range of industries around the globe.
+          button(href="global-reach.html").right-carat Global reach
+      
+      .row.padded.experience
+        .columns.small-12
+          h2.red-top-stripes.text-center Experience
+        .columns.small-12.large-6.pad-left
+          h3 Rely on the experts for unmatched results
+          ul.icon-list
+            li
+              i.icon.icon-person
+              p Lorem ipsum doler sit amat sit doler. Ipsum, lorem sit doler amat.
+            li
+              i.icon.icon-person
+              p Lorem ipsum doler sit amat sit doler. Ipsum, lorem sit doler amat.
+          button(href="our_team.html").right-carat Our team
+        .columns.small-12.large-6.pad-left.pad-right
+          .info-box.dark-info-box
+            span.author Author Name
+            hr.red-stripes
+            span.date Oct 13, 2015
+            h3 Article Title Name
+            p.body Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+            .action-bar
+              i.icon.icon-news
+              span.category News
+              button(href="news.html").right-carat Learn more
+      
+      hr
+      
+      .row.padded.technology
+        .columns.small-12
+          h2.red-top-stripes.text-center Technology
+        .columns.small-8.text-center.align-center
+          p At AJL, our 165,000 square foot, environmentally controlled facility and extensive array of state-of-the-art equipment enable us to meet our customers&rsquo; most demanding manufacturing needs.
+        
+        .pad-left.pad-right.table
+          .table-row
+            .dark-bg.half-width.pad-left.pad-right.padded
+              h4 Industries served
+              ul.lines-list
+                li
+                  a(href="#") Office and mail equipment
+                li
+                  a(href="#") Homeland security
+                li
+                  a(href="#") Medical devices
+                li
+                  a(href="#") Oil and gas
+                li
+                  a(href="#") Office and mail equipment
+                li
+                  a(href="#") Homeland security
+                li
+                  a(href="#") Medical devices
+                li
+                  a(href="#") Oil and gas
+                li
+                  a(href="#") Office equipment
+            .half-width
+              img(src="images/photos/welding.jpg").photo
+              .action-bar
+                i.icon.icon-layers
+                button(href="industries.html").right-carat Industries
+      
+    include _project_callout
+      
+    include _footer
+    include _scripts.jade
