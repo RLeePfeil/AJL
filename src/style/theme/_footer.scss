@@ -14,10 +14,12 @@ footer .footer {
 		
 		li {
 			margin-bottom: 1rem;
+			text-align: center;
 			
 			@include mq(desktop) {
 				display: inline-block;
 				margin-right: 2rem;
+				text-align: left;
 			}
 		}
 	}

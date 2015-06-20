@@ -83,7 +83,6 @@ html, body {
 .row {
 	.pad-left {
 		padding-left: 1rem;
-		padding-right: 1rem;
 		
 		@include mq(netbook) {
 			padding-left: 2rem;
@@ -95,7 +94,6 @@ html, body {
 	}
 	
 	.pad-right {
-		padding-left: 1rem;
 		padding-right: 1rem;
 	
 		@include mq(netbook) {
@@ -107,10 +105,10 @@ html, body {
 		}
 	}
 	
-	.padded {
+	/*.padded {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
-	}
+	}*/
 }
 
 .align-center {
@@ -118,7 +116,9 @@ html, body {
 	margin-right: auto;
 	float: none!important;
 }
-.photo {width: 100%;}
+.photo {
+	width: 100%;
+}
 
 section {
 	overflow: hidden;
@@ -180,11 +180,11 @@ hr {
 .pad-left {
 	.action-bar {
 		@include mq(tablet) {
-			padding-left: 3em;
+			padding-left: 4rem;
 		}
 		
 		@include mq(netbook) {
-			padding-left: 5em;
+			padding-left: 6.25rem;
 		}
 	}
 }
@@ -200,12 +200,12 @@ ul.icon-list {
 		
 		.icon {
 			float: left;
-			margin-right: 2rem;
+			margin-right: 1.5rem;
+			margin-bottom: 1rem;
 		}
 		
 		p {
-			float: left;
-			margin-top: 1rem;
+			margin-top: .5rem;
 		}
 	}
 }
@@ -214,6 +214,8 @@ ul.lines-list {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	overflow: hidden;
+	padding-bottom: 1px;
+	padding-top: 1px;
 	
 	li {
 		float: left;
@@ -240,6 +242,60 @@ ul.lines-list {
 				transition: all .35s ease-out 0s, border-color .35s ease-out 0s;
 			}
 		}
+	}
+}
+
+.text-quote {
+	padding-top: 2.1em;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+p.subtle {
+	color: $grey;
+}
+
+.full-photo {
+	padding: 0;
+	position: relative;
+	min-height: 600px;
+	overflow: hidden;
+	
+	@include mq(desktop) {
+		margin-bottom: 4px;
+	}
+	
+	.info-box {
+		margin: 4rem 2rem 2rem;
+		
+		.left, .right {
+			float: none;
+		}
+		
+		@include mq(desktop) {
+			margin: 12rem 6rem;
+			
+			&.left {
+				margin-right: 55%;
+			}
+			
+			&.right {
+				margin-left: 55%;
+			}
+		}
+	}
+	
+	img {
+		min-height:100%;
+		min-width:100%;
+		max-width: unset;
+		height:auto;
+		width:auto;
+		position:absolute;
+		top:-50%; bottom:-50%;
+		left:-50%; right:-50%;
+		margin:auto;
 	}
 }
 
@@ -302,6 +358,10 @@ section .dark-bg, .dark-bg {
 		padding-left: 2rem;
 		background-color: transparent;
 		background-image: $stripes;
+		
+		.icon {
+			font-size: 1.5rem;
+		}
 		
 		span.category {
 			color: $grey;
@@ -388,6 +448,19 @@ h4 {
 	font-weight: 700;
 }
 
+.icon {
+	display: inline-block;
+	margin-right: .5em;
+	font-size: 4rem;
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+	
+	// in the meantime....
+	background-color: green;
+	border-radius: 100%;
+}
+
 .red-top-stripes, .white-top-stripes {
 	position: relative;
 	padding-top: 1rem;
@@ -457,7 +530,7 @@ button {
 		background-color: $darkred;
 	}
 	
-	&.right-carat {
+	&.right-carat, &.down-carat {
 		padding-right: 3.25rem;
 	}
 }
@@ -501,24 +574,24 @@ button {
 		height: 3px;
 		background-color: #FFF;
 		position: absolute;
-		top: 40%;
+		bottom: 47%;
 		right: 1.5em;
 		transition: all .35s ease-in-out 0s;
 	}
 	
 	&:before {
-		margin-left: -0.35em;
+		margin-right: -0.35em;
 		transform: rotate(-45deg);
 	}
 	
 	&:after {
-		margin-left: 0.35em;
+		//margin-right: 0.175em;
 		transform: rotate(45deg);
 	}
 	
 	&:hover {
 		&:before, &:after {
-			right: 1.25em;
+			bottom: 40%;
 		}
 	}
 }
@@ -543,14 +616,24 @@ address {
 .half-width {
 	position: relative;
 	vertical-align: middle;
+	overflow: hidden;
 	width: 100%;
 	
 	@include mq(desktop) {
 		display: table-cell;
 		width: 50%;
+		min-height: 410px;
 		
 		.photo {
-			// make sure it fills the block somehow! important! TODO
+			min-height:100%;
+			min-width:100%;
+			max-width: unset;
+			height:auto;
+			width:auto;
+			position:absolute;
+			top:-50%; bottom:-50%;
+			left:-50%; right:-50%;
+			margin:auto;
 		}
 	}
 }
