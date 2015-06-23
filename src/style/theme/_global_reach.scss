@@ -1,8 +1,16 @@
 body#global-reach {
 	.global-reach {
+		background-image: url(../images/global-reach/bg-globe.png);
+		
 		.info-box {
 			margin-top: 6rem;
 			margin-bottom: 6rem;
 		}
+	}
+	
+	.project-callout {
+		margin-top: -4px;
+		position: relative;
+		z-index: 1;
 	}
 }
