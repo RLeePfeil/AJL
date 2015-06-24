@@ -1,0 +1,136 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title AJL Manufacturing Inc.
+    meta(name="description", content="Our history | AJL Manufacturing Inc.")
+    include _head.jade
+  
+  body#our-history
+    a(href="#main").visuallyhidden Skip to main content
+    
+    include _header
+    
+    section#main
+      .row.no-padding.table
+        .table-row
+          .half-width.pad-left.pad-right.padded.intro-copy
+            span.author About us
+            hr.red-stripes
+            h1.no-margin Our history
+            p Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+            .action-bar
+              button(href="about-us.html").left.left-carat About us
+          .half-width
+            img(src="images/timeline/bg-intro.jpg", alt="").photo
+      
+      .row
+        .columns.small-12.full-photo
+          .info-box.left
+            span.author Our history
+            hr.red-stripes
+            h3 Our beginning
+            p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+            .action-bar
+              i.icon.icon-news
+              span 1
+              button(href="#how-far-weve-come").down-carat What makes us different
+          img(src="images/photos/factory-4.jpg" alt="")
+      
+      .row
+        .columns.small-12.full-photo
+          a(name="how-far-weve-come")
+          .info-box.right
+            span.author How far weve come
+            hr.red-stripes
+            h3 Our beginning
+            p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+            .action-bar
+              i.icon.icon-news
+              span 2
+              button(href="#timeline").down-carat Timeline
+          img(src="images/photos/factory-4.jpg" alt="")
+      
+      .row.padded.dark-bg
+        .columns.medium-8.large-6.text-center.align-center
+          p.text-quote.red-top-stripes Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+      
+      .row
+        .columns.small-12.padded.pad-left.pad-right.full-photo.timeline
+          ul.timeline-controls
+            li
+              a(href="#timeline-1966") 1966
+            li
+              a(href="#timeline-1988") 1988
+            li
+              a(href="#timeline-1997") 1997
+            li
+              a(href="#timeline-2002") 2002
+            li
+              a(href="#timeline-2006") 2006
+            li
+              a(href="#timeline-2015") 2015
+          
+          .timeline-items
+            .info-box.left
+              span.author 1966
+              hr.red-stripes
+              h3 Our beginning
+              p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+              .action-bar
+                i.icon.icon-news
+                span 1
+                button(href="#timeline").down-carat 1988
+            .info-box.left
+              span.author 1988
+              hr.red-stripes
+              h3 Our beginning
+              p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+              .action-bar
+                i.icon.icon-news
+                span 2
+                button(href="#timeline").down-carat 1997
+            .info-box.left
+              span.author 1997
+              hr.red-stripes
+              h3 Our beginning
+              p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+              .action-bar
+                i.icon.icon-news
+                span 3
+                button(href="#timeline").down-carat 2002
+            .info-box.left
+              span.author 2002
+              hr.red-stripes
+              h3 Our beginning
+              p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+              .action-bar
+                i.icon.icon-news
+                span 4
+                button(href="#timeline").down-carat 2006
+            .info-box.left
+              span.author 2006
+              hr.red-stripes
+              h3 Our beginning
+              p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+              .action-bar
+                i.icon.icon-news
+                span 5
+                button(href="#timeline").down-carat 2015
+            .info-box.left
+              span.author 2015
+              hr.red-stripes
+              h3 Our beginning
+              p.body Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+              .action-bar
+                i.icon.icon-news
+                span 6
+                button(href="#timeline").down-carat the future . . .
+            
+          img(src="images/timeline/bg-timeline.jpg").photo
+      
+    include _project_callout
+      
+    include _footer
+    include _scripts.jade

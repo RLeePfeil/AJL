@@ -1,0 +1,15 @@
+body#careers {
+	.careers {
+		.info-box {
+			border-top: 1px solid $grey;
+			
+			&:last {
+				border-bottom: 1px solid $grey;
+			}
+			
+			button {
+				margin-left: 2rem;
+			}
+		}
+	}
+}

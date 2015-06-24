@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         js_files: [
             'js/ajl/init.js',
             'js/ajl/nav.js',
+            'js/ajl/timeline.js',
         ],
         output: {
             folder:                 '../build/',

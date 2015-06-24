@@ -5,7 +5,7 @@
      * handles the main <header> and <nav> DOM manipulations
      */
 
-    parlec.modules.nav = {
+    ajl.modules.nav = {
 
         tag: 'nav',
 

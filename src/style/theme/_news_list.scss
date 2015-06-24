@@ -1,0 +1,45 @@
+body#news-list {
+	.news-list {
+		.info-box {
+			position: relative;
+			margin-bottom: 1px;
+			overflow: hidden;
+			
+			@include mq(netbook) {
+				padding-right: 510px;
+			}
+			
+			img.photo {
+				margin: 1rem -1rem 1rem;
+				
+				@include mq(netbook) {
+					margin: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+.pagination-button {
+	padding: .25em .45em;
+	line-height: 1;
+	color: $blue;
+	display: inline-block;
+	margin: 0 1px;
+	
+	&:hover, &:focus, &:active, &.active {
+		background-color: $red;
+		color: #FFF;
+	}
+}
+
+.pagination-button-next, .pagination-button-prev, .pagination-button-first, .pagination-button-last {
+	span {
+		text-indent: -9999em;
+	}
+}

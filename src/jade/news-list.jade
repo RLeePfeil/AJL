@@ -1,0 +1,96 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title AJL Manufacturing Inc.
+    meta(name="description", content="News | AJL Manufacturing Inc.")
+    include _head.jade
+  
+  body#news-list
+    a(href="#main").visuallyhidden Skip to main content
+    
+    include _header
+    
+    section#main
+      .row.no-padding.table
+        .table-row
+          .half-width.pad-left.pad-right.padded.intro-copy
+            span.author RESOURCES
+            hr.red-stripes
+            h1.no-margin News
+            p Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+            .action-bar
+              button.left.left-carat Resources
+          .half-width
+            img(src="images/photos/office-discussion.jpg", alt="").photo
+      
+      .row.padded.dark-bg
+        .columns.medium-8.large-6.text-center.align-center
+          p.text-quote.red-top-stripes Lorem ipsum sit doler amat, consecteur lorem. Doler ipsum, lorem sit amat doler ipsum lorem.
+      
+      .row.news-list
+        .columns.small-12.info-box.full-width.padded.pad-left.pad-right
+          span.author Author Name
+          hr.red-stripes
+          span.date Oct 13, 2015
+          h3 Article Title Name
+          img(src="images/photos/square-machining.jpg").photo
+          p.body Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+          button(href="news.html").right-carat Read more
+        .columns.small-12.info-box.full-width.padded.pad-left.pad-right
+          span.author Author Name
+          hr.red-stripes
+          span.date Oct 13, 2015
+          h3 Article Title Name
+          img(src="images/photos/square-machining.jpg").photo
+          p.body Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+          button(href="news.html").right-carat Read more
+        .columns.small-12.info-box.full-width.padded.pad-left.pad-right
+          span.author Author Name
+          hr.red-stripes
+          span.date Oct 13, 2015
+          h3 Article Title Name
+          img(src="images/photos/square-machining.jpg").photo
+          p.body Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+          button(href="news.html").right-carat Read more
+        .columns.small-12.info-box.full-width.padded.pad-left.pad-right
+          span.author Author Name
+          hr.red-stripes
+          span.date Oct 13, 2015
+          h3 Article Title Name
+          img(src="images/photos/square-machining.jpg").photo
+          p.body Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+          button(href="news.html").right-carat Read more
+        .columns.small-12.info-box.full-width.padded.pad-left.pad-right
+          span.author Author Name
+          hr.red-stripes
+          span.date Oct 13, 2015
+          h3 Article Title Name
+          img(src="images/photos/square-machining.jpg").photo
+          p.body Lorem ipsum doler sit amat. Lorem ipsum doler sit amat. Lorem ipsum doler sit ipsum doler sit amat.Lorem ipsum doler sit amat. Ipsum doler sit amat, lorem ipsum doler.
+          button(href="news.html").right-carat Read more
+        .columns.small-12.padded.pad-left.pad-right
+          .pagination.text-center
+            a.pagination-button-first
+              span first
+            a.pagination-button-prev
+              span previous
+            a.pagination-button
+              span 1
+            a.pagination-button
+              span 2
+            a.pagination-button.active
+              span 3
+            a.pagination-button
+              span 4
+            a.pagination-button-next
+              span next
+            a.pagination-button-last
+              span last
+            
+    
+    include _project_callout
+      
+    include _footer
+    include _scripts.jade

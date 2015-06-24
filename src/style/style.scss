@@ -165,8 +165,14 @@ hr {
 	
 	button {
 		float: right;
-		border-left: 2px solid $darkred;
+		border-style: solid;
+		border-width: 0 0 0 2px;
+		border-color: $darkred;
 		margin-bottom: 0;
+		
+		&.left {
+			border-width: 0 2px 0 0;
+		}
 	}
 	
 	span.category {
@@ -311,10 +317,24 @@ section .dark-bg, .dark-bg {
 .info-box {
 	position: relative;
 	background-color: #FFF;
-	border: 1rem solid rgba(255, 255, 255, .85);
+	border: 1rem solid rgba(255, 255, 255, .5);
 	padding: 1.5rem 2rem 4rem;
 	background-clip: padding-box;
 	z-index: 5;
+	
+	&.full-width {
+		border: 0;
+	}
+	
+	&.padded {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		
+		@include mq(desktop) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
 	
 	span.author, span.date {
 		font-size: .85rem;
@@ -370,7 +390,7 @@ section .dark-bg, .dark-bg {
 }
 
 .dark-info-box {
-	border-color: rgba(49, 52, 57, .85); //$blue;
+	border-color: rgba(49, 52, 57, .5); //$blue;
 	background-color: $darkblue;
 	
 	span.author {
@@ -533,6 +553,10 @@ button {
 	&.right-carat, &.down-carat {
 		padding-right: 3.25rem;
 	}
+	
+	&.left-carat {
+		padding-left: 3.25rem;
+	}
 }
 
 .right-carat {
@@ -592,6 +616,37 @@ button {
 	&:hover {
 		&:before, &:after {
 			bottom: 40%;
+		}
+	}
+}
+
+.left-carat {
+	// Carat
+	&:before, &:after {
+		content: "";
+		width: .6em;
+		height: 3px;
+		background-color: #FFF;
+		position: absolute;
+		top: 40%;
+		left: 2em;
+		transition: all .35s ease-in-out 0s;
+	}
+	
+	&:before {
+		margin-left: -0.65em;
+		transform: rotate(135deg);
+	}
+	
+	&:after {
+		margin-left: -0.65em;
+		margin-top: 0.3em;
+		transform: rotate(45deg);
+	}
+	
+	&:hover {
+		&:before, &:after {
+			left: 1.75em;
 		}
 	}
 }
@@ -657,8 +712,14 @@ address {
 	}
 	
 	button {
-		margin: 0 0 0 4rem;
-		vertical-align: middle;
+		margin: 1rem auto 0;
+		display: block;
+		
+		@include mq(netbook) {
+			margin: 0 0 0 4rem;
+			vertical-align: middle;
+			display: inline-block;
+		}
 	}
 }
 
@@ -668,6 +729,15 @@ address {
 
 // Global reach page
 @import "theme/global_reach";
+
+// News page
+@import "theme/news_list";
+
+// Careers page
+@import "theme/careers";
+
+// Our history page
+@import "theme/our_history";
 
 // Footer
 @import "theme/footer";

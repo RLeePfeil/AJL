@@ -1,0 +1,63 @@
+.timeline {
+	position: relative;
+	overflow: hidden;
+}
+
+.timeline-controls {
+	position: relative;
+	z-index: 1;
+	top: 3rem;
+	
+	li {
+		position: relative;
+		height: 2.5rem;
+		border-left: 1px solid #FFF;
+		margin-bottom: .75rem;
+		list-style: none;
+		
+		&:last-child {
+			height: auto;
+			border-left: 0;
+		}
+		
+		a {
+			color: #FFF;
+			font-weight: 700;
+			position: relative;
+			top: -1.1rem;
+			left: -.75rem;
+			padding-left: 1.75rem;
+		}
+		
+		&:before {
+			content: "";
+			position: absolute;
+			left: -.35rem;
+			top: -.75rem;
+			width: .75rem;
+			height: .75rem;
+			border: 1px solid #FFF;
+			border-radius: 100%;
+		}
+		
+		&:after {
+			content: "";
+			position: absolute;
+			left: -.25rem;
+			top: -.625rem;
+			width: .5rem;
+			height: .5rem;
+			background-color: $red;
+			border-radius: 100%;
+			transform: scale(0);
+			transition: all .35s ease-in 0s;
+		}
+		
+		&.active {
+			&:after {
+				transform: scale(1);
+				transition: all .35s ease-out .25s;
+			}
+		}
+	}
+}

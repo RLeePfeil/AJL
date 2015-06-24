@@ -2,10 +2,10 @@
     'use strict';
 
 
-    window.parlec = {
+    window.ajl = {
 
 
-        tag: 'P A R L E C',
+        tag: 'A J L',
 
         DATA: {},  // empty object we can populate after requesting JSON
 
@@ -25,82 +25,13 @@
              * * * * * * * * * */
             
             // Smooth scroll magellan links (to the appropriate spots)
-            $('a[data-magellan-arrival]').on('click', function(){
+            $('a[href^="#"]').on('click', function(){
                 $('html,body').animate({
-                    scrollTop: $('#' + $(this).attr('data-magellan-arrival')).offset().top - Math.floor($('.header').height())
+                    scrollTop: $($(this).attr('href')).offset().top // - Math.floor($('.header').height())
                 }, 1000);
                 
                 return false;
             });
-            
-            // Open dealer map (desktop and mobile)
-            $('#btn-find-a-dealer').on('click', function(){
-                $('#find-a-dealer').addClass('open');
-                $('.dealer-map').slideDown();
-                
-                 $('html,body').animate({
-                    scrollTop: $(this).offset().top - Math.floor($('.header').height() / 2)
-                }, 1000);
-            });
-            
-            // Open company info when bullet is clicked on
-            $('.dealer-map').find('span.bullet').on('click', function(){
-                // Hide others
-                $('.dealer-map').find('li').removeClass('open');
-                // Show this company info
-                $(this).parent().addClass('open');
-                return false; // Return false so the $(section) click event isn't triggered via event bubbling
-            });
-            
-            // When clicking on a pointer on mobile, show the info block
-            $('span.pointer').on('click', function(){
-                $('.info-block').removeClass('open');
-                $(this).next('.info-block').addClass('open');
-                return false; // Return false so the $(section) click event isn't triggered via event bubbling
-            }).filter(':eq(0)').trigger('click'); // Start with the first one open
-            
-            // When clicking next/prev in info blocks on mobile, show the next/prev info block and scroll to it
-            $('.next, .prev', '#presetter').on('click', function(){
-                var $this = $(this),
-                    $nextPointer;
-                
-                // Find the next pointer
-                if ($this.hasClass('prev')) {
-                    $nextPointer = $('.pointer:eq('+ ($('.info-block').index($this.closest('.info-block')) - 1) +')');
-                } else {
-                    $nextPointer = $('.pointer:eq('+ ($('.info-block').index($this.closest('.info-block')) + 1) +')');
-                }
-                
-                // Trigger next pointer and scroll to opening info box position
-                setTimeout(function(){$nextPointer.trigger('click')}, 500);
-                var $nextInfoBlock = $nextPointer.next('.info-block').show();
-                $('html,body').animate({
-                    scrollTop: $nextInfoBlock.offset().top - $nextInfoBlock.height() - 20
-                }, 1000);
-            });
-            
-            // Close open company info block when section#presetter is clicked
-            $('section#find-a-dealer').on('click', function() {
-                $('.dealer-map').find('li').removeClass('open');
-            });
-            
-            // Close open info block when section#presetter is clicked
-            $('section#presetter').on('click', function(){
-                $('.info-block').removeClass('open');
-            });
-            
-            $(window).on('resize', window.parlec.onResize)
-                     .on('scroll', window.parlec.onScroll)
-                     .trigger('resize')
-                     .trigger('scroll');
-        },
-        
-        onResize: function(e) {
-            
-        },
-        
-        onScroll: function(e) {
-            
         },
 
         utils: {
@@ -138,7 +69,7 @@
 
     $(document).ready(function () {
         $(document).foundation();
-        parlec.init();
+        ajl.init();
     });
 
 
