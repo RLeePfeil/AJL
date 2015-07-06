@@ -24,8 +24,8 @@
              * Event handlers  *
              * * * * * * * * * */
             
-            // Smooth scroll magellan links (to the appropriate spots)
-            $('a[href^="#"]').on('click', function(){
+            // Smooth scroll links (to the appropriate spots)
+            $('a[href^="#"]:not([no-scroll])').on('click', function(){
                 $('html,body').animate({
                     scrollTop: $($(this).attr('href')).offset().top // - Math.floor($('.header').height())
                 }, 1000);

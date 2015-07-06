@@ -1,12 +1,16 @@
 .timeline {
 	position: relative;
 	overflow: hidden;
+	
+	.photo {
+		transition: all .5s ease-in-out 0s;
+	}
 }
 
 .timeline-controls {
-	position: relative;
+	position: absolute;
 	z-index: 1;
-	top: 3rem;
+	top: 13rem;
 	
 	li {
 		position: relative;
@@ -60,4 +64,11 @@
 			}
 		}
 	}
+}
+
+.timeline-items {
+	position: relative;
+	z-index: 5;
+	padding-left: 80px;
+	transition: all .5s ease-in-out 0s;
 }
