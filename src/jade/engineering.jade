@@ -1,0 +1,42 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title AJL Manufacturing Inc.
+    meta(name="description", content="Careers | AJL Manufacturing Inc.")
+    include _head.jade
+  
+  body#careers
+    a(href="#main").visuallyhidden Skip to main content
+    
+    include _header
+    
+    section#main
+      .row.no-padding.table
+        .table-row
+          .half-width.pad-left.pad-right.padded.intro-copy
+            span.author Our approach
+            hr.red-stripes
+            h1 Engineering
+            p While sophisticated technology is important to us at AJL Manufacturing, we know maintaining a workforce with the right expertise and skills to operate the equipment and carry out our processes are vital to your success.
+            p Similar to the quality and growth we strive to nurture in our client relationships, we also work to create opportunities for employees to reach their full potential.
+            .action-bar
+              button.left.left-carat Resources
+          .half-width
+            img(src="images/photos/office-discussion.jpg", alt="").photo
+      
+      .row.padded.dark-bg
+        .columns.small-12.text-center
+          h2.red-top-stripes What makes AJL different?
+          
+        .columns
+      
+      .row.padded.case-study
+      
+      include _our_services
+      
+    include _project_callout
+      
+    include _footer
+    include _scripts.jade
