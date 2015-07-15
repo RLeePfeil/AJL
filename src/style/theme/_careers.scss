@@ -7,8 +7,28 @@ body#careers {
 				border-bottom: 1px solid $grey;
 			}
 			
+			p {
+				max-width: 60rem;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			
 			button {
-				margin-left: 2rem;
+				margin-left: 3rem;
+			}
+			
+			@include mq(netbook-max) {
+				padding-bottom: 4rem;
+				
+				button {
+					bottom: 0;
+					margin-right: 1rem;
+					margin-left: 0;
+					position: absolute;
+					right: 0;
+				}
 			}
 		}
 	}
