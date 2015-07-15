@@ -25,7 +25,7 @@
     "grunt-contrib-uglify": "~0.7.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-csscomb": "~3.0.0",
-    "grunt-sass": "^0.16.0",
+    "grunt-sass": "^1.0.0",
     "load-grunt-tasks": "~2.0.0",
     "marked": "~0.3.2",
     "time-grunt": "~1.0.0"

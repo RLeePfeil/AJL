@@ -52,6 +52,7 @@ header {
 				left: 0;
 				height: .3em;
 				width: 2em;
+				background-color: $blue;
 			}
 			
 			&:before {
@@ -71,6 +72,7 @@ header {
 			width: 2em;
 			top: .75em;
 			margin-top: -.15em;
+			background-color: $blue;
 		}
 		
 		@include mq(netbook) {
@@ -83,13 +85,28 @@ header {
 	}
 	
 	.main-nav {
-		float: right;
+		@include mq(netbook) {
+			float: right;
 		
-		li {
-			float: left;
-			list-style: none;
+			li {
+				float: left;
+				list-style: none;
+			}
 		}
-		
+
+		@include mq(netbook-max) {
+			position: absolute;
+			left: 100%;
+			top: 50px;
+			width: 100%;
+			background-color: #FFF;
+			transition: all .35s ease-in-out 0s;
+
+			&.open {
+				left: 0%;
+			}
+		}
+
 		a {
 			text-transform: uppercase;
 			color: $blue;
@@ -143,6 +160,7 @@ header {
 	}
 }
 
+// Highlight the right nav on the right page
 body#about-us a.nav-about-us, body#our-approach a.nav-our-approach, body#global-reach a.nav-global-reach, body#resources a.nav-resources, body#contact-us a.nav-contact-us {
 	&:before {
 		height: 100%;

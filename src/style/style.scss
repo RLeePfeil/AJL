@@ -536,7 +536,7 @@ button {
 	padding: 1rem 1.25rem 1.0625rem;
 	font-weight: 500;
 	
-	&:hover {
+	&:hover, &:focus {
 		background-color: $darkred;
 	}
 	
