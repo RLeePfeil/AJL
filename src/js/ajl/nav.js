@@ -51,6 +51,7 @@
             // setup toggle
             // ----------------------------------------
             $toggle.on('click', function (event) {
+                console.log("toggle menu clicked");
                 event.preventDefault();
                 toggle_active_class($menu);
                 if (!$header.hasClass('header-active')) {
