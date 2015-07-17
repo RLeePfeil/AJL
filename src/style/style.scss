@@ -51,8 +51,8 @@ html, body {
 
 .no-margin {margin: 0;}
 .no-padding {
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 0;
+	padding-right: 0;
 	
 	@include mq(desktop) {
 		padding: 0;
@@ -690,15 +690,18 @@ address {
 
 // Content styles
 .project-callout {
-	text-align: center;
-	color: #FFF;
-	background-color: $darkblue;
-	padding: 4rem;
-	font-size: 2rem;
-	font-weight: 700;
-	
 	.row {
-		background-color: transparent;
+		text-align: center;
+		color: #FFF;
+		background-color: $darkblue;
+		padding: 4rem 2rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+
+		@include mq(netbook) {
+			padding: 4rem;
+			font-size: 2rem;
+		}
 	}
 	
 	button {

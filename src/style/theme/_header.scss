@@ -82,7 +82,14 @@ header {
 	}
 	
 	.logo {
-		margin-top: 2rem;
+		margin-bottom: 6px;
+		margin-top: 16px;
+		min-width: 174px;
+
+		@include mq (netbook) {
+			margin-top: 2rem;
+			margin-bottom: 0;
+		}
 	}
 	
 	.main-nav {
@@ -161,14 +168,14 @@ header {
 		@include mq(netbook-max) {
 			position: absolute;
 			z-index: 5;
-			left: 100%;
-			top: 70px;
-			width: 100%;
+			right: -240px;
+			top: 75px;
+			width: 240px;
 			background-color: $blue;
 			transition: all .35s ease-in-out 0s;
 
 			&.active {
-				left: 0%;
+				right: 0;
 			}
 
 			li {
