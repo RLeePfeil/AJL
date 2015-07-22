@@ -1,5 +1,5 @@
 body#home {
-	background-image: url(../images/bg-main.jpg);
+	background-image: url(../images/index/bg-main.jpg);
 	background-size: cover;
 	background-position: center top;
 	
@@ -75,6 +75,8 @@ body#home {
 			font-size: 4rem;
 			display: block;
 			margin: 0 auto .25em;
+			position: relative;
+			z-index: 5;
 		}
 		
 		a {
@@ -87,6 +89,10 @@ body#home {
 			height: 10em;
 			position: relative;
 			z-index: 1;
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
 			
 			&:after {
 				background-image: $lightstripes;
@@ -109,6 +115,22 @@ body#home {
 				}
 			}
 		}
+		
+		&.nav-services-engineering a {
+			background-image: url(../images/index/bg-services-engineering.jpg);
+		}
+		&.nav-services-prototyping a {
+			background-image: url(../images/index/bg-services-prototyping.jpg);
+		}
+		&.nav-services-manufacturing a {
+			background-image: url(../images/index/bg-services-manufacturing.jpg);
+		}
+		&.nav-services-assembly a {
+			background-image: url(../images/index/bg-services-assembly.jpg);
+		}
+		&.nav-services-supply-chain-management a {
+			background-image: url(../images/index/bg-services-supply-chain-management.jpg);
+		}
 	}
 }
 
@@ -121,8 +143,4 @@ body#home {
 		margin: 2em 0 4em;
 		font-weight: 300;
 	}
-}
-
-.experience {
-	
 }

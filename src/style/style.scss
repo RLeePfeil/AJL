@@ -175,6 +175,10 @@ hr {
 		}
 	}
 	
+	i.icon {
+		font-size: 1.5rem;
+	}
+	
 	span.category {
 		text-transform: uppercase;
 		color: #FFF;
@@ -212,6 +216,63 @@ ul.icon-list {
 		
 		p {
 			margin-top: .5rem;
+		}
+	}
+}
+
+ol.numbered-list {
+	margin: 0;
+	list-style: none;
+	
+	li {
+		padding-left: 5.5rem;
+		margin-bottom: 2rem;
+		
+		span.number {
+			background-image: $lightstripes;
+			border-left: 9px solid $grey;
+			display: block;
+			float: left;
+			font-size: 2rem;
+			font-weight: 700;
+			height: 3.5rem;
+			line-height: 0.85;
+			margin-left: -5.5rem;
+			padding: 1rem;
+			text-align: center;
+			width: 3.85rem;
+		}
+		
+		p {
+			margin-top: 0;
+		}
+		
+		@include mq(desktop) {
+			padding-top: .5rem;
+			
+			span.number {
+				margin-top: -.5rem;
+			}
+		}
+	}
+	
+	&:last-child {
+		li:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.dark-bg ol.numbered-list {
+	li {
+		span.number {
+			background-image: $darkstripes;
+			color: $grey;
+			border-color: $blue;
+		}
+		
+		p {
+			color: $grey;
 		}
 	}
 }
@@ -378,6 +439,10 @@ section .dark-bg, .dark-bg {
 		padding-left: 2rem;
 		background-color: transparent;
 		background-image: $stripes;
+		position: static;
+		margin-left: -2rem; // Same amount as info-box padding
+		margin-right: -2rem; // Same amount as info-box padding
+		margin-bottom: -4rem; // Same amount as info-box padding
 		
 		.icon {
 			font-size: 1.5rem;
@@ -385,6 +450,15 @@ section .dark-bg, .dark-bg {
 		
 		span.category {
 			color: $grey;
+		}
+		
+		@include mq(tablet-max) {
+			button {
+				margin-left: -2rem;
+				text-align: center;
+				padding-left: 2rem;
+				padding-right: 5rem;
+			}
 		}
 	}
 }
@@ -679,6 +753,32 @@ address {
 			top:-50%; bottom:-50%;
 			left:-50%; right:-50%;
 			margin:auto;
+		}
+	}
+	
+	&.padded {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		
+		@include mq(desktop) {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+	}
+	
+	&.pad-left {
+		padding-left: 2rem;
+		
+		@include mq(desktop) {
+			padding-left: 4rem;
+		}
+	}
+	
+	&.pad-right {
+		padding-right: 2rem;
+		
+		@include mq(desktop) {
+			padding-right: 4rem;
 		}
 	}
 }
