@@ -1,6 +1,6 @@
 body#home {
 	background-image: url(../images/index/bg-main.jpg);
-	background-size: cover;
+	background-size: 100% auto;
 	background-position: center top;
 	
 	#landing-hero {
@@ -26,6 +26,21 @@ body#home {
 				padding-left: 5.25rem;
 			}
 		}
+	}
+}
+
+.vertical-dividing-stripes {
+	@include mq(netbook) {
+		background: url(../images/index/vertical-divider-stripes.png);
+		display: block;
+		width: 34px;
+		height: 59px;
+		position: absolute;
+		z-index: 5;
+		left: 50%;
+		top: 50%;
+		margin-left: -27px;
+		margin-top: -29px;
 	}
 }
 
@@ -55,6 +70,63 @@ body#home {
 	a.down-carat {
 		&:before, &:after {
 			right: 50%;
+			background-color: $lightgrey;
+		}
+	}
+	
+	.pad-left {
+		p {
+			font-weight: 100;
+			margin-left: 7rem;
+			margin-top: -5rem;
+		}
+	}
+	
+	@include mq(netbook) {
+		.pad-left {
+			p {
+				margin-right: 2rem;
+			}
+		}
+		
+		.pad-right {
+			p {
+				margin-left: 2rem;
+			}
+		}
+	}
+	
+	i.icon {
+		height: 5rem;
+		margin-bottom: 0.25rem;
+		margin-top: -0.25rem;
+		width: 5rem;
+	}
+	
+	strong {
+		font-size: 1.37rem;
+		
+		a.right-carat {
+			color: $lightgrey;
+			display: inline-block;
+			padding-right: 3.25rem;
+			position: relative;
+			transition: all .35s ease-in-out 0s;
+			
+			&:before, &:after {
+				height: 4px;
+				top: 33%;
+				width: 12px;
+				background-color: $lightgrey;
+			}
+			
+			&:hover {
+				color: $lightblue;
+				
+				&:before, &:after {
+					background-color: $lightblue;
+				}
+			}
 		}
 	}
 }
