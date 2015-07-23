@@ -183,7 +183,8 @@ hr {
 		text-transform: uppercase;
 		color: #FFF;
 		font-weight: 100;
-		font-size: .85rem;
+		letter-spacing: .05em;
+		vertical-align: middle;
 	}
 }
 
@@ -607,7 +608,7 @@ h4 {
 button {
 	background-color: $red;
 	text-transform: uppercase;
-	padding: 1rem 1.25rem 1.0625rem;
+	padding: 1rem 1.5rem 1.0625rem;
 	font-weight: 500;
 	
 	&:hover, &:focus {
@@ -780,6 +781,10 @@ address {
 		@include mq(desktop) {
 			padding-right: 4rem;
 		}
+	}
+	
+	.action-bar {
+		padding-left: 1rem;
 	}
 }
 

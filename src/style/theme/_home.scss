@@ -2,6 +2,7 @@ body#home {
 	background-image: url(../images/index/bg-main.jpg);
 	background-size: 100% auto;
 	background-position: center top;
+	background-repeat: no-repeat;
 	
 	#landing-hero {
 		position: relative;
@@ -16,14 +17,15 @@ body#home {
 	
 	.intro-copy {
 		.action-bar {
-			left: 1rem;
+			left: 0!important;
 			
 			@include mq(tablet) {
 				padding-left: 3rem;
 			}
 			
 			@include mq(netbook) {
-				padding-left: 5.25rem;
+				padding-left: 3.25rem;
+				left: 1rem!important;
 			}
 		}
 	}
@@ -77,8 +79,8 @@ body#home {
 	.pad-left {
 		p {
 			font-weight: 100;
-			margin-left: 7rem;
-			margin-top: -5rem;
+			margin-left: 8.5rem;
+			margin-top: -6.75rem; // Same as icon height
 		}
 	}
 	
@@ -97,10 +99,11 @@ body#home {
 	}
 	
 	i.icon {
-		height: 5rem;
+		height: 6.75rem;
 		margin-bottom: 0.25rem;
 		margin-top: -0.25rem;
-		width: 5rem;
+		width: 6.75rem;
+		font-size: 6.75rem;
 	}
 	
 	strong {
