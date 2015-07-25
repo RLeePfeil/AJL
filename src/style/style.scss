@@ -130,12 +130,17 @@ section {
 	}
 }
 
+ul {
+	margin-left: 1.37rem;
+}
+
 hr {
 	height: 1px;
 	background-color: $grey;
 	display: block;
 	border: 0;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 98rem; // same as max row width
 	
 	&.red-stripes {
 		height: 8px;
@@ -188,8 +193,26 @@ hr {
 	}
 }
 
+.intro-copy {
+	span.author {
+		color: $blue;
+		font-size: .75rem;
+		text-transform: uppercase;
+	}
+	
+	h1 {
+		margin-top: 1.37rem;
+		margin-bottom: 2.74rem;
+	}
+	
+	p {
+		font-weight: 500;
+		color: $grey;
+	}
+}
+
 .pad-left {
-	.action-bar {
+	& > .action-bar {
 		@include mq(tablet) {
 			padding-left: 4rem;
 		}
@@ -204,6 +227,7 @@ ul.icon-list {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 	overflow: hidden;
+	margin-left: 0;
 	
 	li {
 		overflow: hidden;
@@ -281,6 +305,7 @@ ol.numbered-list {
 ul.lines-list {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+	margin-left: 0;
 	overflow: hidden;
 	padding-bottom: 1px;
 	padding-top: 1px;
@@ -773,6 +798,10 @@ address {
 		@include mq(desktop) {
 			padding-left: 4rem;
 		}
+		
+		@include mq(desktop-hd) {
+			padding-left: 6.25rem;
+		}
 	}
 	
 	&.pad-right {
@@ -781,10 +810,10 @@ address {
 		@include mq(desktop) {
 			padding-right: 4rem;
 		}
-	}
-	
-	.action-bar {
-		padding-left: 1rem;
+		
+		@include mq(desktop-hd) {
+			padding-right: 6.25rem;
+		}
 	}
 }
 
